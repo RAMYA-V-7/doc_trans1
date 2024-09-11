@@ -1,0 +1,156 @@
+<!-- <div class="header">
+    <div class="logo-title">
+      <img src="https://i.postimg.cc/tCP13PNR/image-1.png" alt="DiGiVerZ Logo" class="logo" />
+      <div class="vertical-divider"></div> <span>‎ ‎ ‎‎ ‎ ‎‎</span>
+      <h1>Accelerator <span>(Arabic to English)</span></h1>
+    </div>
+  
+    <div class="user-profile">
+      <mat-icon>notifications</mat-icon>
+      <div class="user-info">
+        <span>Abdullah‎ ‎ ‎‎ ‎ ‎</span>
+        <img src="https://imagetolink.com/ib/OquMI5z1sC.jpg" alt="User" class="profile-pic" />
+      </div>
+    </div>
+  </div>
+  
+<div class="brown-line"></div>
+
+<div class="content">
+    <div class="translate-section">
+      <button mat-raised-button class="translate-button">
+        <span class="plus-icon">+</span>
+        Translate
+      </button>
+      <p class="file-types">Supported file types : PDF, Docx, Doc</p>
+    </div>
+  </div>
+ -->
+ <div class="header">
+  <div class="logo-title">
+    <img src="https://i.postimg.cc/tCP13PNR/image-1.png" alt="DiGiVerZ Logo" class="logo" />
+    <div class="vertical-divider"></div> <span>‎ ‎ ‎‎ ‎ ‎‎</span>
+    <h1>Accelerator <span>(Arabic to English)</span></h1>
+  </div>
+
+  <div class="user-profile">
+    <mat-icon>notifications</mat-icon>
+    <div class="user-info">
+      <span>Abdullah‎ ‎ ‎‎ ‎ ‎</span>
+      <img src="https://imagetolink.com/ib/OquMI5z1sC.jpg" alt="User" class="profile-pic" />
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Header Section -->
+  <div class="translate-section">
+    <div class="center-content">
+      <!-- Hidden file input -->
+      <input type="file" #fileInput (change)="onFileSelected($event)" hidden />
+
+      <!-- Translate Button -->
+      <button mat-raised-button color="primary" class="translate-btn" (click)="fileInput.click()">
+        <mat-icon>add</mat-icon> Translate
+      </button>
+      <!-- Download Button -->
+      <button mat-raised-button color="accent" class="translate-btn" (click)="onDownloadClick()">
+        <mat-icon>file_download</mat-icon> Download
+      </button>
+      <p class="supported-text">Supported file types: PDF, DOCX, DOC</p>
+    </div>
+  </div>
+</div>
+
+<!-- Folder Cards Section -->
+<div class="folder-cards">
+  <mat-card class="folder-card">
+    <div class="card-header">
+      <mat-checkbox class="checkbox"></mat-checkbox>
+      <mat-icon class="folder-icon">folder</mat-icon>
+    </div>
+    <div class="folder-details">
+      <h3 style="margin-left: 70px;">Project 01</h3>
+      <p>12 Files</p>
+      <p>30 MB</p>
+    </div>
+  </mat-card>
+
+  <mat-card class="folder-card">
+    <div class="card-header">
+      <mat-checkbox class="checkbox"></mat-checkbox>
+      <mat-icon class="folder-icon">folder</mat-icon>
+    </div>
+    <div class="folder-details">
+      <h3 style="margin-left: 70px;">Project 02</h3>
+      <p>24 Files</p>
+      <p>60 MB</p>
+    </div>
+  </mat-card>
+
+  <mat-card class="folder-card">
+    <div class="card-header">
+      <mat-icon class="folder-icon">add</mat-icon>
+    </div>
+  </mat-card>
+</div>
+
+<br>
+<!-- Recent Files Section -->
+<div class="recent-files">
+  <h6 style="font-weight: 400; margin-left: 20px;">Recent files</h6>
+  <div class="search-bar">
+    <mat-form-field style="margin-left: 20px;" appearance="outline">
+      <mat-label style="margin-left: 20px;">Search</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <button mat-icon-button class="search-btn">
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button class="filter-btn">
+      <mat-icon>filter_list</mat-icon>
+    </button>
+  </div>
+
+  <table mat-table [dataSource]="dataSource" style="margin-left: 20px; width: 80%;" class="mat-elevation-z8">
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+        <mat-checkbox></mat-checkbox>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="documentName">
+      <th mat-header-cell *matHeaderCellDef>Document Name</th>
+      <td mat-cell *matCellDef="let element">{{element.documentName}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="createdDate">
+      <th mat-header-cell *matHeaderCellDef>Created Date</th>
+      <td mat-cell *matCellDef="let element">{{element.createdDate}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="language">
+      <th mat-header-cell *matHeaderCellDef>Language</th>
+      <td mat-cell *matCellDef="let element">{{element.language}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="numberOfPages">
+      <th mat-header-cell *matHeaderCellDef>Number Of Pages</th>
+      <td mat-cell *matCellDef="let element">{{element.numberOfPages}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="fileSize">
+      <th mat-header-cell *matHeaderCellDef>File Size</th>
+      <td mat-cell *matCellDef="let element">{{element.fileSize}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+<!-- Progress Bar Section -->
+<div *ngIf="showProgressBar" class="progress-container">
+  <mat-progress-bar mode="determinate" [value]="uploadProgress"></mat-progress-bar>
+</div>

@@ -1,0 +1,258 @@
+/* General page styling */
+
+
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recent-files,.searchbar,.searchbar{
+  margin-right: 20px;
+}
+.translate-btn {
+  margin-bottom: 10px; /* Adjust space between button and text */
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f5;
+  }
+  
+.translate-section {
+    width: 93%; /* Adjust the width to match the design */
+    padding: 50px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card-like appearance */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .translate-button {
+    background-color: #b30000 !important; /* Red background */
+    color: white !important;
+    padding: 10px 60px;
+    font-size: 18px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  
+  .plus-icon {
+    font-size: 26px;
+    font-weight: 400;
+    margin-right: 8px;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  
+  .file-types {
+    font-size: 14px;
+    color: gray;
+    margin-top: 10px;
+  }
+  /* Header styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 3px solid #b30000;
+  }
+  /* Vertical divider (Pipe symbol) styling */
+.vertical-divider {
+    height: 50px; /* Increase this value for more height */
+    width: 2px;
+    background-color: #adadad;
+    margin: 0 20px; /* Add spacing around the divider */
+  }
+  /* Brown line below navbar */
+.brown-line {
+    height: 3px;
+    background-color: #b30000;
+    margin-top: 0;
+    width: 1px;
+  }
+  .logo-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 150px;
+    height : 60px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  h1 span {
+    font-size: 16px;
+    color: gray;
+    font-weight: normal;
+  }
+  
+  /* User profile styling */
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-info span {
+    margin-right: 10px;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  mat-icon {
+    font-size: 24px;
+    margin-right: 20px;
+  }
+  
+  /* Content styling */
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    max-height: 20px;
+  }
+  
+  .translate-button {
+    background-color: #b30000;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  
+  .translate-button mat-icon {
+    margin-right: 8px;
+  }
+  
+  .file-types {
+    margin-top: 1px;
+    font-size: 12px;
+    font-weight: 400;
+    color: gray;
+  }
+  
+
+  .container {
+    padding: 20px;
+    background-color: #f5f6fa;
+    justify-content: center;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .custom-snackbar {
+    color: white !important; /* Text color */
+    background-color: #900000 !important; /* Background color */
+  }
+  .translate-btn {
+    background-color: #900000 !important;
+    color: white !important;
+    padding: 10px 20px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .supported-text {
+    color: grey;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .folder-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    width: 40%;
+    
+  }
+  
+  .folder-card {
+    width: 40%;
+    height: 60%;
+    margin-right:30px;
+    display: flex;
+    
+    justify-content: left;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .checkbox {
+    align-self: flex-start;
+  }
+  
+  .folder-icon {
+    font-size: 30px;
+    color: #900000;
+    margin-left: 67px;
+    bottom: 5px;
+  }
+  
+  .folder-details {
+    align-self: flex-start;
+  }
+  
+  .folder-details h3 {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 5px;
+  }
+  
+  .folder-details p {
+    font-size: 12px;
+    color: grey;
+    margin-bottom: 5px;
+  }
+  
+  .mat-form-field {
+    width: 80%;
+    margin-left: 20px;
+  }
+  
+  .files-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-left: 20px;
+  }
+  
+
+
+  
